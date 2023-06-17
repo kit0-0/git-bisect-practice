@@ -24,5 +24,7 @@ function addTask() {
     todoInput.value = '';
   }
   
-
-
+  function deleteTask(event) {
+    const taskItem = event.target.parentElement;
+    todoList.removeChild(taskItem);
+  }
