@@ -23,6 +23,9 @@ body {
   
   li {
     margin-bottom: 10px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
   }
   
   .completed {
