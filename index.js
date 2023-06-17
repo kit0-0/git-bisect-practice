@@ -2,20 +2,27 @@ const todoForm = document.getElementById('todo-form');
 const todoInput = document.getElementById('todo-input');
 const todoList = document.getElementById('todo-list');
 
-todoForm.addEventListener('submit', function(event) {
-  event.preventDefault();
-  const task = todoInput.value;
-  if (task) {
-    addTask(task);
+todoForm.addEventListener('submit', addTask);
+
+function addTask() {
+    const todoInput = document.getElementById('todo-input');
+    const taskText = todoInput.value;
+    
+    const taskItem = document.createElement('li');
+    taskItem.textContent = taskText;
+    
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.addEventListener('click', deleteTask);
+    
+    taskItem.appendChild(taskText); // Bug: Incorrectly appending taskText instead of deleteButton
+    taskItem.appendChild(deleteButton);
+    
+    const todoList = document.getElementById('todo-list');
+    todoList.appendChild(taskItem);
+    
     todoInput.value = '';
   }
-});
+  
 
-function addTask(task) {
-  const li = document.createElement('li');
-  li.textContent = task;
-  li.addEventListener('click', function() {
-    li.classList.toggle('completed');
-  });
-  todoList.appendChild(li);
-}
+
