@@ -24,7 +24,7 @@ To get started with the project, follow these steps:
    git bisect start
    ```
 
-2. Identify a commit where the bug didn't exist. You can use `git log` to view the commit history and find a suitable commit. Copy the commit hash of that commit.
+2. Identify a commit where the bug didn't exist. You can use `git log` to view the commit history and find a suitable commit. Copy the commit hash of that commit. Press `Ctrl + C` OR `q` OR `Esc` key followed by `:q` to return you to the command prompt
 
 3. Mark the current commit as bad by running the following command:
    ```
