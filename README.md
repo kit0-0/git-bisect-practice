@@ -26,6 +26,8 @@ To get started with the project, follow these steps:
 
 2. Identify a commit where the bug didn't exist. You can use `git log` to view the commit history and find a suitable commit. Copy the commit hash of that commit. Press `Ctrl + C` OR `q` OR `Esc` key followed by `:q` to return you to the command prompt
 
+     **Note:**If you are getting error `error: Bad rev input:` use `git log --pretty=format:%h` or `git rev-list --abbrev-commit HEAD`
+
 3. Mark the current commit as bad by running the following command:
    ```
    git bisect bad
